@@ -1,0 +1,42 @@
+.main{
+    width: 50%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+}
+.line{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between
+    ;
+    align-items: center;
+
+}
+.line > div{
+    width: 80px;
+    height: 70px;
+    background-color: rgb(77, 74, 74);
+    color: white;
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 10px;
+ 
+}
+#header{
+    background-color: blueviolet;
+    height: 45px;
+    text-align: right;
+    padding: 10px 10px;
+    font-size: 40px;
+    color: white;
+    overflow: hidden;
+}
+#item:hover{
+    cursor: default;
+}
+#header:hover{
+    cursor: default;
+}
