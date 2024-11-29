@@ -4,8 +4,17 @@
     display: flex;
     flex-direction: column;
     background-color: grey;
+    overflow: hidden;
+}
+.body{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .line{
+    width: 270px;
+  
     margin-top: 10px;
     display: flex;
     justify-content: space-between
@@ -14,7 +23,7 @@
 
 }
 .line > div{
-    width: 80px;
+    width: 50%;
     height: 70px;
     background-color: rgb(77, 74, 74);
     color: white;
@@ -22,7 +31,7 @@
     align-items: center;
     font-weight: bold;
     font-size: 18px;
-    margin: 10px;
+    margin: 7px;
  
 }
 #header{
@@ -39,4 +48,48 @@
 }
 #header:hover{
     cursor: default;
+}
+.footer {
+    
+    display: flex;  /* Utilisation de flexbox pour aligner les enfants horizontalement */
+    justify-content: space-between;  /* Espace entre les éléments enfants */
+    width: 88%;  /* Le footer prend toute la largeur de son conteneur parent */
+    margin: 10px 10px;  /* Espacement vertical autour du footer */
+    padding: 10px;  /* Ajout d'un peu de padding pour l'esthétique */
+    background-color: #333;  /* Couleur de fond pour mieux voir le footer */
+}
+
+#zero, #equal {
+    display: inline-block;  /* Changer de inline à inline-block pour permettre de définir des largeurs */
+    background-color: orange;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+.operations{
+    margin: 18px 10px 9px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.operations > div{
+    width: 50px;
+    height: 60px;
+    background-color: orange;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+#equal {
+    width: 80px;  /* Largeur spécifique pour le bouton "=" */
+}
+#equal:hover{
+    cursor: default;
+}
+#zero:hover{
+    cursor: default;
+}
+#zero {
+    width: 80px;  /* Largeur spécifique pour le bouton "0" */
 }
