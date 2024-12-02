@@ -2,49 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .calculator {
+            background-color: #333;
+            border-radius: 10px;
+            width: 250px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .display {
+            background-color: #444;
+            color: white;
+            text-align: right;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            font-size: 24px;
+            overflow: hidden;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        button {
+            background-color: #666;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        button:hover {
+            background-color: #777;
+        }
+        .operator {
+            background-color: #ff9800;
+        }
+        .operator:hover {
+            background-color: #ffa726;
+        }
+        .equal {
+            background-color: #4CAF50;
+        }
+        .equal:hover {
+            background-color: #45a049;
+        }
+        .clear {
+            background-color: #f44336;
+        }
+        .clear:hover {
+            background-color: #d32f2f;
+        }
+    </style>
 </head>
 <body>
-    <main>
-        
-            <div class="main">
-                <div id="header">
-                    0
-                </div>
-                <div class="body">
-                    <div class="numbers">
-                        <div class="line">
-                            <div id="item">1</div>
-                            <div id="item">2</div>
-                            <div id="item">3</div>
-                        </div>
-                        <div class="line">
-                            <div id="item">4</div>
-                            <div id="item">5</div>
-                            <div id="item">6</div>
-                        </div>
-                        <div class="line">
-                            <div id="item">7</div>
-                            <div id="item">8</div>
-                            <div id="item">9</div>
-                        </div>
-                    </div>
-                    <div class="operations">
-                        <div class="op">+</div>
-                        <div class="op">-</div>
-                        <div class="op">/</div>
-                        <div class="op">x</div>
-                    </div>
-                </div>
-                <div class="footer">
-                    <div id="zero">0</div>
-                    <div id="equal">=</div>
-                </div>
-            </div>
-        
-    </main>
+    <div class="calculator">
+        <div class="display" id="result">0</div>
+        <div class="buttons">
+            <button id="clear" class="clear">C</button>
+            <button class="operator" id="operator">÷</button>
+            <button class="operator" id="operator">×</button>
+            <button class="operator" id="operator">-</button>
+            
+            <button id="value">7</button>
+            <button id="value">8</button>
+            <button id="value">9</button>
+            <button class="operator" id="operator">+</button>
+            
+            <button id="value">4</button>
+            <button id="value">5</button>
+            <button id="value">6</button>
+            <button class="equal" id="equal">=</button>
+            
+            <button id="value">1</button>
+            <button id="value">2</button>
+            <button id="value">3</button>
+            <button id="value">0</button>
+            
+            <button id="value">.</button>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
